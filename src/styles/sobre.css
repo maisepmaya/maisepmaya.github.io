@@ -1,0 +1,105 @@
+/* Sobre mim: colagem de papel rosa, retícula e código */
+.colagem {
+  --c-fundo: #EBA8BD; --c-magenta: #C24D7A; --c-vinho: #8A2350; --c-tinta: #2A1E22; --c-papel: #F8EDE9;
+  position: relative; overflow: hidden; background: var(--c-fundo); padding: 96px 0 0; isolation: isolate;
+}
+.colagem::after { content: ''; position: absolute; inset: 0; background: url(/assets/img/sobre/grao.png); mix-blend-mode: multiply; opacity: .55; pointer-events: none; z-index: 1; }
+
+/* decoração */
+.col-deco { position: absolute; inset: 0; pointer-events: none; z-index: 0; }
+.col-deco > * { position: absolute; }
+.d-banda { width: 70%; max-width: none; }
+.d-banda.claro { left: -8%; top: 34%; transform: rotate(-6deg); opacity: .9; }
+.d-banda.magenta { right: -14%; top: 2%; width: 58%; transform: rotate(4deg); opacity: .55; }
+.d-grade { left: 2%; top: 40%; width: 24%; height: 26%; transform: rotate(-3deg); background-color: #F1BCCB;
+  background-image: linear-gradient(rgba(194,77,122,.45) 1px, transparent 1px), linear-gradient(90deg, rgba(194,77,122,.45) 1px, transparent 1px);
+  background-size: 18px 18px; clip-path: polygon(0 4%, 18% 0, 46% 3%, 78% 0, 100% 5%, 98% 52%, 100% 100%, 64% 96%, 30% 100%, 0 97%, 2% 50%); }
+.d-xadrez { width: 150px; height: 130px; background: conic-gradient(var(--c-magenta) 25%, #F3B9CA 0 50%, var(--c-magenta) 0 75%, #F3B9CA 0) 0 0 / 30px 30px;
+  clip-path: polygon(0 8%, 30% 0, 70% 6%, 100% 0, 96% 55%, 100% 100%, 60% 94%, 20% 100%, 2% 70%); opacity: .85; }
+.d-xadrez.a { left: -1%; top: 58%; transform: rotate(-8deg); }
+.d-xadrez.b { right: -1%; bottom: 3%; transform: rotate(6deg); }
+.d-pontos { width: 560px; right: -200px; bottom: -180px; opacity: .9; }
+.d-binario { left: 1.5%; top: 2%; margin: 0; font: 500 clamp(14px, 1.4vw, 19px)/1.4 'IBM Plex Mono', var(--mono); color: var(--c-magenta); opacity: .75; letter-spacing: .02em; }
+.d-pastas { left: 2.5%; top: 21%; list-style: none; margin: 0; padding: 14px 16px; background: var(--c-papel); transform: rotate(-2deg); font: 500 13px 'IBM Plex Mono', var(--mono); color: var(--c-tinta);
+  display: grid; gap: 8px; clip-path: polygon(0 2%, 50% 0, 100% 3%, 98% 50%, 100% 97%, 50% 100%, 2% 98%, 0 50%); }
+.d-pastas li { display: flex; align-items: center; gap: 10px; }
+.d-pastas svg { width: 26px; height: 22px; fill: none; stroke: var(--c-tinta); stroke-width: 2; stroke-linejoin: round; }
+.rab svg { width: 100%; height: 100%; overflow: visible; }
+.rab path { fill: none; stroke: var(--c-vinho); stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+.rab path.cheio { fill: var(--c-vinho); stroke-width: 2; }
+.rab.coroa { width: 92px; height: 62px; left: 25%; top: 6%; transform: rotate(-6deg); }
+.rab.estrela { width: 76px; height: 76px; left: 4%; top: 46%; transform: rotate(12deg); z-index: 2; }
+.rab.coracao { width: 54px; height: 50px; left: 45%; top: 22%; transform: rotate(-14deg); }
+.rab.raios { width: 70px; height: 70px; left: 35%; top: 9%; transform: rotate(8deg); }
+.raios-gata { position: absolute; left: -11%; top: -3%; width: 52px; height: 52px; z-index: 2; pointer-events: none; }
+.raios-gata path { fill: var(--c-vinho); }
+.rab.brilho { width: 46px; height: 46px; left: 68%; top: 64%; }
+.rab.seta { width: 64px; height: 76px; right: 5%; top: 54%; transform: rotate(4deg); }
+.rab.estrelinha { width: 30px; height: 30px; right: 10%; top: 50%; }
+.d-cursor { width: 44px; height: 64px; filter: drop-shadow(2px 3px 0 rgba(42,30,34,.25)); }
+.d-cursor.a { left: 11%; top: 19%; transform: rotate(-10deg); }
+.d-cursor.b { right: 4%; top: 9%; z-index: 3; width: 36px; height: 52px; }
+
+/* conteúdo */
+.col-grade { position: relative; z-index: 2; display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 20px; align-items: end; }
+.col-retrato { margin: 0; align-self: end; }
+.col-retrato img { width: 100%; max-width: 520px; margin: 0 auto -2px; filter: drop-shadow(0 10px 18px rgba(138,35,80,.18)); }
+.col-direita { display: flex; flex-direction: column; gap: 22px; padding-bottom: 0; }
+
+/* janela .md */
+.janela { background: var(--c-papel); position: relative; transform: rotate(-1deg); filter: drop-shadow(0 12px 18px rgba(138,35,80,.22)); }
+.janela::before { content: ''; position: absolute; inset: 0; background: url(/assets/img/sobre/grao.png); mix-blend-mode: multiply; opacity: .6; pointer-events: none; }
+.janela-barra { display: flex; align-items: center; gap: 14px; background: var(--c-magenta); color: var(--c-papel); padding: 9px 16px; border: 2px solid var(--c-tinta); border-bottom-width: 2px; font: 500 15px 'IBM Plex Mono', var(--mono); }
+.bolinhas { display: flex; gap: 6px; }
+.bolinhas i { width: 14px; height: 14px; border-radius: 50%; background: var(--c-papel); border: 2px solid var(--c-tinta); }
+.bolinhas i:first-child { background: var(--c-tinta); }
+.janela-nome { flex: 1; text-align: center; }
+.janela-botoes { letter-spacing: .3em; font-size: 14px; }
+.janela-corpo { position: relative; padding: 24px clamp(20px, 3vw, 36px) 18px; }
+.janela-rasgo { position: absolute; left: 0; right: 0; top: 100%; width: 100%; height: 34px; margin-top: -1px; pointer-events: none; }
+.janela { margin-bottom: 30px; }
+.janela h2 { margin: 0 0 14px; font: 900 clamp(30px, 3.4vw, 46px)/1.05 'Source Serif 4', Georgia, serif; color: var(--c-tinta); letter-spacing: -0.01em; }
+.asterisco { color: var(--c-magenta); font-size: .7em; vertical-align: .3em; margin-left: 6px; display: inline-block; transform: rotate(10deg); }
+.janela p { margin: 0; font: 400 16px/1.7 'IBM Plex Mono', var(--mono); color: var(--c-tinta); max-width: 62ch; }
+.janela p b { font-weight: 600; }
+
+/* etiquetas */
+.colagem .sobre-tags { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
+.colagem .adesivo { font: 500 16px 'IBM Plex Mono', var(--mono); background: var(--c-papel); border: 2px solid var(--c-tinta); padding: 8px 14px; display: inline-flex; align-items: center; gap: 8px; box-shadow: 3px 3px 0 rgba(42,30,34,.35); }
+.colagem .adesivo.rosa { background: #F2B9CA; }
+.colagem .adesivo.escura { background: var(--c-tinta); color: var(--c-papel); }
+.colagem .adesivo .ico { width: 18px; height: 18px; fill: currentColor; }
+.colagem .adesivo.escura .ico { fill: #F2A3BE; }
+.colagem .adesivo:focus-visible { outline: 3px solid var(--c-tinta); outline-offset: 3px; }
+
+/* gatas */
+.col-gatas { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 8px; align-items: end; }
+.col-gatas .gata { position: relative; margin: 0; }
+.col-gatas img { width: 100%; filter: drop-shadow(0 8px 14px rgba(138,35,80,.18)); }
+.col-gatas .mystra img { max-width: 300px; }
+.col-gatas .maggie { margin-bottom: 0; }
+.nome { position: absolute; font: 600 18px 'IBM Plex Mono', var(--mono); color: var(--c-tinta); background: var(--c-papel); padding: 6px 14px; box-shadow: 2px 3px 0 rgba(42,30,34,.3); }
+.nome::before { content: ''; position: absolute; left: 50%; top: -9px; width: 46px; height: 16px; transform: translateX(-50%) rotate(-4deg); background: rgba(236,170,192,.75); }
+.mystra .nome { left: 18%; top: -2%; transform: rotate(-3deg); }
+.maggie .nome { left: 22%; top: -14%; transform: rotate(4deg); }
+
+/* tira "psiu" */
+.psiu { position: absolute; z-index: 3; left: 3%; bottom: 26px; margin: 0; padding: 22px 40px 22px 34px; transform: rotate(-3deg);
+  background: url(/assets/img/sobre/tira-papel.webp) center / 100% 100% no-repeat; font: 500 17px 'IBM Plex Mono', var(--mono); color: var(--c-tinta); }
+.psiu span { color: var(--c-vinho); font-weight: 600; }
+.psiu b { margin-left: 14px; }
+
+@media (max-width: 1100px) {
+  .d-pastas, .d-cursor.a, .rab.coroa { display: none; }
+}
+@media (max-width: 860px) {
+  .colagem { padding-top: 120px; }
+  .col-grade { grid-template-columns: minmax(0, 1fr); }
+  .col-retrato { order: 2; }
+  .col-retrato img { max-width: 380px; }
+  .col-direita { order: 1; }
+  .d-grade, .d-xadrez.a, .rab.estrela, .rab.brilho, .rab.seta, .rab.estrelinha, .d-banda.claro { display: none; }
+  .d-binario { font-size: 12px; }
+  .d-cursor.b { top: 4%; }
+  .psiu { position: relative; left: auto; bottom: auto; margin: -40px 0 24px 16px; display: inline-block; font-size: 15px; }
+}
