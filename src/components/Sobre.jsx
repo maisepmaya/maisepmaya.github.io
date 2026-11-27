@@ -97,7 +97,7 @@ export default function Sobre() {
 
       <div className="container col-grade">
         <figure className="col-retrato">
-          <img src={s('maise.webp')} alt={t('Retrato de Maíse em retícula pontilhada, recortado como adesivo, que se desfaz em código binário embaixo.', 'Portrait of Maíse in halftone dots, cut out like a sticker, dissolving into binary code at the bottom.')} width="760" height="1097" />
+          <img src={s('maise-adesivo.webp')} alt={t('Foto de Maíse sorrindo, de roupa preta, recortada como adesivo.', 'Photo of Maíse smiling, dressed in black, cut out like a sticker.')} width="760" height="1097" />
         </figure>
 
         <div className="col-direita">
@@ -129,11 +129,11 @@ export default function Sobre() {
           <div className="col-gatas">
             <figure className="gata mystra">
               <svg className="raios-gata" viewBox="0 0 60 60" aria-hidden="true"><path d="M2 34 L34 30 L34 37 Z M8 8 L36 25 L32 30 Z M30 0 L41 22 L35 24 Z" /></svg>
-              <img src={s('mystra.webp')} alt={t('Mystra, gata tricolor de olhos azuis, em retícula pontilhada.', 'Mystra, a blue-eyed calico cat, in halftone dots.')} width="620" height="1031" loading="lazy" />
+              <img src={s('mystra-adesivo.webp')} alt={t('Mystra, gata tricolor de olhos azuis, recortada como adesivo.', 'Mystra, a blue-eyed calico cat, cut out like a sticker.')} width="620" height="978" loading="lazy" />
               <figcaption className="nome">Mystra</figcaption>
             </figure>
             <figure className="gata maggie">
-              <img src={s('maggie.webp')} alt={t('Maggie, gata frajola de olhos amarelos, em retícula pontilhada.', 'Maggie, a yellow-eyed tuxedo cat, in halftone dots.')} width="760" height="650" loading="lazy" />
+              <img src={s('maggie-adesivo.webp')} alt={t('Maggie, gata frajola de olhos amarelos, recortada como adesivo.', 'Maggie, a yellow-eyed tuxedo cat, cut out like a sticker.')} width="620" height="703" loading="lazy" />
               <figcaption className="nome">Maggie</figcaption>
             </figure>
           </div>

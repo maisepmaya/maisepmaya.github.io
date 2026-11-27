@@ -103,3 +103,20 @@
   .d-cursor.b { top: 4%; }
   .psiu { position: relative; left: auto; bottom: auto; margin: -40px 0 24px 16px; display: inline-block; font-size: 15px; }
 }
+
+/* retrato maior, subindo até o espaço livre da colagem */
+@media (min-width: 861px) { .col-retrato img { width: 132%; max-width: none; margin-left: -16%; } }
+.mystra .nome { top: 4%; }
+.maggie .nome { top: 1%; }
+
+/* composição: as gatas menores que você (escala), levemente giradas e sobrepostas, como coladas no caderno */
+@media (min-width: 861px) {
+  .col-gatas { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0; align-items: end; margin-top: 10px; }
+  .col-gatas .gata.mystra { transform: rotate(-4deg); z-index: 2; justify-self: end; margin-right: -26px; }
+  .col-gatas .gata.maggie { transform: rotate(3deg); margin-bottom: 18px; }
+  .col-gatas .mystra img { max-width: 250px; }
+  .col-gatas .maggie img { max-width: 270px; }
+}
+
+/* celular: a dica "psiu" fica por cima da base da foto, escondendo o corte */
+@media (max-width: 860px) { .psiu { margin: -64px 0 28px 16px; position: relative; z-index: 4; } }
