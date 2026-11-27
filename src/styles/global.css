@@ -348,5 +348,14 @@ a:hover { color: var(--tinta); }
 .idioma button[aria-pressed=true] { background: var(--tinta); color: var(--papel); }
 .idioma button:hover:not([aria-pressed=true]) { background: var(--rosa-claro); }
 .idioma button:focus-visible { outline: 3px solid var(--vinho); outline-offset: -4px; }
-@media (max-width: 600px) { .topo-dir { gap: 10px; width: 100%; justify-content: space-between; } }
+@media (max-width: 600px) {
+  /* celular: idioma sobe para a linha do logo; menu ou "voltar" ficam numa linha só embaixo */
+  .topo { padding: 14px 0; }
+  .topo .container { display: grid; grid-template-columns: 1fr auto; align-items: center; row-gap: 8px; column-gap: 12px; }
+  .topo-dir { display: contents; }
+  .topo-dir .idioma { grid-column: 2; grid-row: 1; }
+  .topo-dir .menu, .topo-dir .voltar { grid-column: 1 / -1; grid-row: 2; }
+  .idioma { border-width: 1.5px; }
+  .idioma button { font-size: 11px; padding: 4px 8px; min-height: 30px; min-width: 34px; }
+}
 h1, h2, h3 { overflow-wrap: break-word; hyphens: auto; }
