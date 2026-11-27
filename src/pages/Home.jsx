@@ -41,7 +41,10 @@ export default function Home() {
               <pre className="h-bin" aria-hidden="true">{'01001000\n01101001\n01101100\n01101100\n01101111'}</pre>
               <svg className="h-raios" viewBox="0 0 80 70" aria-hidden="true"><path d="M8 52 L22 6 M30 58 L62 22 M40 66 L78 54" /></svg>
               <svg className="h-estrela" viewBox="0 0 100 100" aria-hidden="true"><path d="M50 6 L61 38 L95 39 L67 59 L78 92 L50 72 L22 93 L33 60 L5 40 L39 38 Z M47 10 L58 40 L90 42" /></svg>
-              <span className="dica" aria-hidden="true">↑ <u>{t('mexa na estrela', 'play with the star')}</u> <i /></span>
+              <span className="dica">
+                <span className="lema" lang="en">from design <span aria-hidden="true">→</span> to code</span>
+                <span className="dica-linha" aria-hidden="true">↑ <u>{t('mexa na estrela', 'play with the star')}</u> <i /></span>
+              </span>
             </div>
           </div>
         </section>
