@@ -3,7 +3,7 @@ import HalftoneStar from '../components/HalftoneStar.jsx'
 import Faixa from '../components/Faixa.jsx'
 import Sobre from '../components/Sobre.jsx'
 import CopiarEmail from '../components/CopiarEmail.jsx'
-import { img, CURRICULO } from '../lib/asset.js'
+import { img, CURRICULO, RESUME_EN } from '../lib/asset.js'
 import { useLang } from '../lib/i18n.jsx'
 
 const contatos = [
@@ -13,7 +13,7 @@ const contatos = [
 
 
 export default function Home() {
-  const { t } = useLang()
+  const { lang, t } = useLang()
   return (
     <>
       <main id="conteudo" tabIndex={-1}>
@@ -71,7 +71,7 @@ export default function Home() {
             </div>
             <img className="contato-arte" src={img('nota-pontos.png')} alt="" aria-hidden="true" />
             <div className="contato-cv">
-              <a className="botao-cv" href={CURRICULO}>{t('BAIXAR CURRÍCULO', 'DOWNLOAD RÉSUMÉ')} <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v12M6 11l6 6 6-6M5 21h14" /></svg></a>
+              <a className="botao-cv" href={lang === 'en' ? RESUME_EN : CURRICULO}>{t('BAIXAR CURRÍCULO', 'DOWNLOAD RÉSUMÉ')} <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v12M6 11l6 6 6-6M5 21h14" /></svg></a>
             </div>
           </div>
         </section>

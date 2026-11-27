@@ -28,6 +28,13 @@ const numeros = [
   { v: '5', r: { pt: 'telas de exemplo', en: 'example screens' } },
 ]
 
+const codigo = [
+  { t: { pt: 'Desenho que já nasce viável', en: 'Design that ships as drawn' }, d: { pt: 'Como eu também implemento, cada componente desenhado no Figma já levava em conta o que o Vue e o Quasar fazem bem. O espaçamento seguiu a escala do Quasar que o time já usava.', en: 'Because I also build, every component I drew in Figma already accounted for what Vue and Quasar do well. Spacing followed the Quasar scale the team already used.' } },
+  { t: { pt: 'Sem perda no handoff', en: 'Nothing lost in handoff' }, d: { pt: 'Os 22 componentes validados no Figma com o Diretor de Tecnologia e o Suporte fui eu que construí em código. O que foi aprovado é o que foi para produção.', en: 'I built in code the same 22 components validated in Figma with the CTO and Support. What was approved is what shipped.' } },
+  { t: { pt: 'Uma língua para design e dev', en: 'One language for design and dev' }, d: { pt: 'O style guide mostra a equivalência entre token, classe do Quasar e variável CSS, então quem desenha e quem desenvolve falam dos mesmos nomes.', en: 'The style guide maps each token to its Quasar class and CSS variable, so designers and developers use the same names.' } },
+  { t: { pt: 'IA para escalar a aplicação', en: 'AI to scale the rollout' }, d: { pt: 'Usei IA para acelerar a refatoração das telas antigas e aplicar o sistema em todos os sites em cerca de dois meses.', en: 'I used AI to speed up refactoring the old screens and roll the system out to every site in about two months.' } },
+]
+
 const decisoes = [
   { t: { pt: 'Nomes pelo papel, não pela cor', en: 'Names by role, not by color' }, d: { pt: 'Os tokens dizem para que servem: fundo de superfície, texto de apoio, borda sutil. Assim o tema escuro e a marca do cliente mudam o valor sem mudar o nome.', en: 'Tokens say what they’re for: surface background, supporting text, subtle border. That way the dark theme and the client’s brand change the value without changing the name.' } },
   { t: { pt: 'Aproveitar o framework', en: 'Build on the framework' }, d: { pt: 'O espaçamento segue a escala do Quasar, que o time já conhecia. Menos coisa nova para aprender, menos chance de cada um usar um valor diferente.', en: 'Spacing follows Quasar’s scale, which the team already knew. Less to learn, less chance of everyone using a different value.' } },
@@ -84,6 +91,14 @@ export default function DesignSystem() {
               <li>{t(<><b>Construção</b> dos tokens e dos componentes em Vue com Quasar e TypeScript, documentados num style guide.</>, <><b>Building</b> the tokens and components in Vue with Quasar and TypeScript, documented in a style guide.</>)}</li>
               <li>{t(<><b>Aplicação</b> em todo o site, com apoio de IA para acelerar a refatoração.</>, <><b>Rollout</b> across the whole site, with AI helping speed up the refactor.</>)}</li>
             </ol>
+          </section>
+
+          <section aria-labelledby="t-codigo" data-revela>
+            <h2 id="t-codigo">{t('Onde o código entra no meu design', 'Where code meets my design')}</h2>
+            <p className="lead ds-intro">{t('Desenhei e implementei o sistema. Ter os dois lados na mesma pessoa mudou o resultado em quatro pontos.', 'I designed and built the system. Having both sides in one person changed the outcome in four ways.')}</p>
+            <div className="decisoes decisoes-2">
+              {codigo.map((d) => <div key={d.t.pt}><h3>{t(d.t)}</h3><p>{t(d.d)}</p></div>)}
+            </div>
           </section>
 
           <section aria-labelledby="t-como" data-revela>

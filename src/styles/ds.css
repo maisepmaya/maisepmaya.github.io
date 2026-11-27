@@ -106,3 +106,5 @@
 .ds .ds-intro { margin-bottom: 24px; }
 .ds-nota { margin-top: 16px; color: #4E4E5C; }
 .ds-fonte { font-size: 14px; color: #5C5C6B; margin-top: 20px; }
+
+.decisoes-2 { grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr)); }

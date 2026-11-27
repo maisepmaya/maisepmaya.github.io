@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import Logo from './Logo.jsx'
-import { CURRICULO } from '../lib/asset.js'
+import { CURRICULO, RESUME_EN } from '../lib/asset.js'
 import { useLang } from '../lib/i18n.jsx'
 
 function Idioma() {
@@ -14,7 +14,7 @@ function Idioma() {
 }
 
 export default function Header({ caso }) {
-  const { t } = useLang()
+  const { lang, t } = useLang()
   const [rolou, setRolou] = useState(false)
   useEffect(() => {
     const f = () => setRolou(scrollY > 12)
@@ -34,7 +34,7 @@ export default function Header({ caso }) {
               <a href="#cases">{t('cases', 'work')}</a>
               <a href="#sobre">{t('sobre', 'about')}</a>
               <a href="#contato">{t('contato', 'contact')}</a>
-              <a href={CURRICULO}>{t('currículo', 'résumé')}</a>
+              <a href={lang === 'en' ? RESUME_EN : CURRICULO}>{t('currículo', 'résumé')}</a>
             </nav>
           )}
           <Idioma />
